@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
-    "electron": "^6.0.6"
+    "electron": ">=6.0.6"
   },
   "keywords": [
     "Electron"
