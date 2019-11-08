@@ -1,0 +1,24 @@
+{
+  "name": "electron-cross",
+  "version": "0.0.1",
+  "description": "Electron router manager and Communicate cross router processes.",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "electron": "^6.0.6"
+  },
+  "keywords": [
+    "Electron"
+  ],
+  "author": "Brandon",
+  "license": "MIT",
+  "files": [
+    "src",
+    ".gitignore",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ]
+}
