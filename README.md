@@ -97,6 +97,7 @@ router.off(listener)
 
 ### new Router(options)
 options 参数 Object
+
 |名称|类型|默认值|描述|
 |-|-|-|-|
 |base|String|空|路由path的前缀|
@@ -127,6 +128,7 @@ options 参数 Object
 初始化首页 - 返回`route`对象
 
 route 返回值 Object
+
 |名称|类型|描述|
 |-|-|-|
 |app|-|窗口实例|
@@ -141,6 +143,7 @@ route 返回值 Object
 渲染进程返回Promise，返回窗口实例id
 
 option 参数 Object
+
 |名称|类型|描述|
 |-|-|-|
 |name|String|路由名称|
