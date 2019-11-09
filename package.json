@@ -16,6 +16,10 @@
   "keywords": [
     "Electron"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rombrandon/electron-cross.git"
+  },
   "author": "Brandon",
   "license": "MIT",
   "files": [
