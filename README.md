@@ -15,7 +15,8 @@ npm i electron-cross
 - 主进程/渲染进程均可调用。
 
 ```
-import Router from 'electron-cross'
+import Router from 'electron-cross' // ES6
+const Router = require('electron-cross').default // ES5
 
 export default new Router({
   routes: [
@@ -98,12 +99,13 @@ router.off(listener)
 options 参数 Object
 |名称|类型|默认值|描述|
 |-|-|-|-|
-|base|String|WEBPACK_DEV_SERVER_URL或'app://./'|路由path的前缀|
+|base|String|空|路由path的前缀|
 |menu|Array|空|页面菜单。如果值为false，则隐藏菜单|
 |root|String|routes[0].name|首页|
 |routes|Array|必填项|路由配置项|
 |routes[].name|String|必填项|路由名称|
-|routes[].path|String|必填项|路由URL|
+|routes[].url|String|-|路由loadURL地址|
+|routes[].file|String|-|路由loadFile地址|
 |routes[].config|Object|null|BrowserWindow参数|
 |其他|-|-|默认BrowserWindow参数|
 
@@ -166,4 +168,7 @@ callback中的return将传递给send中的Promise
 
 关闭窗口，不传参数将关闭当前窗口
 
+## Demo
 
+ES5 demo [electron-cross-es5](https://github.com/rombrandon/electron-cross-es5)
+ES6 Vue demo [electron-cross-vue](https://github.com/rombrandon/electron-cross-vue)

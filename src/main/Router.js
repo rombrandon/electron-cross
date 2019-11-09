@@ -2,15 +2,13 @@ import {BrowserWindow} from 'electron'
 import Subscriber from './Subscriber'
 import Menu from './Menu'
 
-export const baseUrl = process.env.WEBPACK_DEV_SERVER_URL || 'app://./'
-
 export default class {
   constructor (options = {}) {
     this.process = 'main'
     this.apps = []
     const {base, menu, routes, root, ...arg} = options
     // 路由地址
-    this.base = base || baseUrl
+    this.base = base || ''
     // 菜单实例
     this.menu = new Menu(menu)
     // 路由配置
@@ -74,8 +72,11 @@ export default class {
       }
     }, this.options, route.config, config))
     // 加载页面
-    const url = this.base + route.path
-    app.loadURL(url)
+    if (route.url) {
+      app.loadURL(this.base + route.url)
+    } else if (route.file) {
+      app.loadFile(this.base + route.file)
+    }
     // 加载菜单
     this.menu.initialize(config.menu)
     this.afterCallback(app, route)

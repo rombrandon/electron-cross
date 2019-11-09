@@ -1,13 +1,17 @@
 {
   "name": "electron-cross",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Electron router manager and Communicate cross router processes.",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir dist"
   },
   "peerDependencies": {
     "electron": ">=6.0.6"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1"
   },
   "keywords": [
     "Electron"
@@ -15,7 +19,9 @@
   "author": "Brandon",
   "license": "MIT",
   "files": [
+    "dist",
     "src",
+    ".babelrc",
     ".gitignore",
     "LICENSE",
     "package.json",
