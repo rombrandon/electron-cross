@@ -171,4 +171,5 @@ callback中的return将传递给send中的Promise
 ## Demo
 
 ES5 demo [electron-cross-es5](https://github.com/rombrandon/electron-cross-es5)
+
 ES6 Vue demo [electron-cross-vue](https://github.com/rombrandon/electron-cross-vue)
