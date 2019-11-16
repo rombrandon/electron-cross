@@ -1,6 +1,6 @@
 {
   "name": "electron-cross",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Electron router manager and Communicate cross router processes.",
   "main": "./dist/index.js",
   "scripts": {
@@ -16,6 +16,10 @@
   "keywords": [
     "Electron"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:rombrandon/electron-cross.git"
+  },
   "author": "Brandon",
   "license": "MIT",
   "files": [
