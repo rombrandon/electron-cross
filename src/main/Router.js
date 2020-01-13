@@ -1,4 +1,5 @@
 import {BrowserWindow} from 'electron'
+import {createProtocol} from 'vue-cli-plugin-electron-builder/lib'
 import Subscriber from './Subscriber'
 import Menu from './Menu'
 
@@ -6,7 +7,9 @@ export default class {
   constructor (options = {}) {
     this.process = 'main'
     this.apps = []
-    const {base, menu, routes, root, ...arg} = options
+    const {protocol, base, menu, routes, root,...arg} = options
+    // app协议
+    this.protocol = protocol
     // 路由地址
     this.base = base || ''
     // 菜单实例
@@ -71,6 +74,9 @@ export default class {
         nodeIntegration: true
       }
     }, this.options, route.config, config))
+    if (this.protocol) {
+      createProtocol(this.protocol)
+    }
     // 加载页面
     if (route.url) {
       app.loadURL(this.base + route.url)

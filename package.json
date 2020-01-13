@@ -1,6 +1,6 @@
 {
   "name": "electron-cross",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Electron router manager and Communicate cross router processes.",
   "main": "./dist/index.js",
   "scripts": {
@@ -10,6 +10,7 @@
     "electron": ">=6.0.6"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1"
   },

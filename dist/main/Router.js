@@ -10,6 +10,8 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _electron = require('electron');
 
+var _lib = require('vue-cli-plugin-electron-builder/lib');
+
 var _Subscriber = require('./Subscriber');
 
 var _Subscriber2 = _interopRequireDefault(_Subscriber);
@@ -33,14 +35,17 @@ var _class = function () {
     this.process = 'main';
     this.apps = [];
 
-    var base = options.base,
+    var protocol = options.protocol,
+        base = options.base,
         menu = options.menu,
         routes = options.routes,
         root = options.root,
-        arg = _objectWithoutProperties(options, ['base', 'menu', 'routes', 'root']);
+        arg = _objectWithoutProperties(options, ['protocol', 'base', 'menu', 'routes', 'root']);
+    // app协议
+
+
+    this.protocol = protocol;
     // 路由地址
-
-
     this.base = base || '';
     // 菜单实例
     this.menu = new _Menu2.default(menu);
@@ -131,6 +136,9 @@ var _class = function () {
           nodeIntegration: true
         }
       }, this.options, route.config, config));
+      if (this.protocol) {
+        (0, _lib.createProtocol)(this.protocol);
+      }
       // 加载页面
       if (route.url) {
         app.loadURL(this.base + route.url);

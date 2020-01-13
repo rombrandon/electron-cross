@@ -100,6 +100,7 @@ options 参数 Object
 
 |名称|类型|默认值|描述|
 |-|-|-|-|
+|protocol|String|空|协议，默认不注册|
 |base|String|空|路由path的前缀|
 |menu|Array|空|页面菜单。如果值为false，则隐藏菜单|
 |root|String|routes[0].name|首页|
